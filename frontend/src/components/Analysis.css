@@ -1,0 +1,102 @@
+
+.analysis-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.file-input {
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.chart-card {
+  background-color: #007BFF;
+  color: #ffffff;
+  padding: 20px;
+  width: 160px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.chart-card:hover {
+  transform: translateY(-6px);
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chart-card.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.chart-section {
+  margin-top: 30px;
+}
+
+.heatmap-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.heatmap-table th,
+.heatmap-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.cell.late {
+  background-color: #ff9999;
+}
+
+.cell.early {
+  background-color: #99ff99;
+}
+
+.cell.ontime {
+  background-color: #b3c6ff;
+}
+
+.back-btn {
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart-card {
+    width: 80%;
+  }
+}
